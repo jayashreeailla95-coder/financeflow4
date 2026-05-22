@@ -1,51 +1,282 @@
 
-<section style="padding:40px 20px;text-align:center;">
-  <h2 style="font-size:48px;font-weight:800;color:#111;margin-bottom:30px;">
-    Apply For Loan
-  </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinanceFlow</title>
 
-  <form style="max-width:400px;margin:auto;background:#fff;padding:25px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <input type="text" id="name" placeholder="Full Name" required
-    style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:16px;">
+<style>
 
-    <input type="tel" id="mobile" placeholder="Mobile Number" required
-    style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:16px;">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    <input type="text" id="loan" placeholder="Loan Type" required
-    style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:16px;">
+body{
+background:#f4f7ff;
+color:#222;
+}
 
-    <input type="text" id="city" placeholder="City" required
-    style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:16px;">
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-    <input type="text" id="income" placeholder="Monthly Income" required
-    style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:16px;">
+header h1{
+color:white;
+font-size:32px;
+font-weight:700;
+}
 
-    <button type="button" onclick="sendWhatsapp()"
-    style="width:100%;padding:15px;background:#1e40ff;color:white;border:none;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:15px;">
-      Apply Now
-    </button>
+.hero{
+padding:80px 20px;
+text-align:center;
+}
 
-  </form>
+.hero h2{
+font-size:58px;
+font-weight:800;
+color:#111;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#555;
+max-width:700px;
+margin:auto;
+}
+
+.loan-section{
+padding:60px 20px;
+}
+
+.loan-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.loan-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.loan-card:hover{
+transform:translateY(-8px);
+}
+
+.loan-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.loan-card h3{
+padding:18px;
+font-size:24px;
+font-weight:700;
+color:#111827;
+}
+
+.loan-card p{
+padding:0 18px 25px;
+color:#555;
+font-size:15px;
+}
+
+.form-section{
+padding:70px 20px;
+text-align:center;
+}
+
+.form-section h2{
+font-size:55px;
+font-weight:800;
+margin-bottom:40px;
+color:#111;
+}
+
+.form-box{
+max-width:430px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:15px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+.form-box button{
+width:100%;
+padding:16px;
+background:#2146ff;
+color:white;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+}
+
+.form-box button:hover{
+background:#1637d6;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:white;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+z-index:1000;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:42px;
+}
+
+.form-section h2{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>FinanceFlow</h1>
+</header>
+
+<section class="hero">
+<h2>Fast & Easy Loans</h2>
+<p>Get instant approval for Personal, Business, Home, Mortgage and Used Car Loans.</p>
 </section>
 
-<script>
-function sendWhatsapp() {
+<section class="loan-section">
 
-let name = document.getElementById("name").value;
-let mobile = document.getElementById("mobile").value;
-let loan = document.getElementById("loan").value;
-let city = document.getElementById("city").value;
-let income = document.getElementById("income").value;
+<div class="loan-grid">
 
-let message =
-"🏦 *New Loan Application* %0A%0A" +
-"👤 Name: " + name + "%0A" +
-"📱 Mobile: " + mobile + "%0A" +
-"💰 Loan Type: " + loan + "%0A" +
-"📍 City: " + city + "%0A" +
-"💵 Monthly Income: " + income;
+<div class="loan-card">
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop">
+<h3>Personal Loan</h3>
+<p>Instant personal loans with minimal documents and quick approval.</p>
+</div>
 
-window.open("https://wa.me/919542359321?text=" + message, "_blank");
-}
-</script>
+<div class="loan-card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+<h3>Business Loan</h3>
+<p>Grow your business with flexible business funding solutions.</p>
+</div>
+
+<div class="loan-card">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
+<h3>Home Loan</h3>
+<p>Affordable home loans with attractive interest rates.</p>
+</div>
+
+<div class="loan-card">
+<img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1200&auto=format&fit=crop">
+<h3>Mortgage Loan</h3>
+<p>Unlock property value with easy mortgage loan options.</p>
+</div>
+
+<div class="loan-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+<h3>Used Car Loan</h3>
+<p>Buy your dream used car with easy EMI finance options.</p>
+</div>
+
+</div>
+</section>
+
+<section class="form-section">
+
+<h2>Apply For Loan</h2>
+
+<div class="form-box">
+
+<form action="https://formsubmit.co/jayashreeailla95@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="tel" name="mobile" placeholder="Mobile Number" required>
+
+<select name="loan" required>
+<option value="">Select Loan Type</option>
+<option>Personal Loan</option>
+<option>Business Loan</option>
+<option>Home Loan</option>
+<option>Mortgage Loan</option>
+<option>Used Car Loan</option>
+</select>
+
+<input type="text" name="city" placeholder="City" required>
+
+<input type="text" name="income" placeholder="Monthly Income" required>
+
+<button type="submit">Apply Now</button>
+
+</form>
+
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919542359321" target="_blank">
+☎
+</a>
+
+<footer>
+© 2026 FinanceFlow | All Rights Reserved
+</footer>
+
+</body>
+</html>
