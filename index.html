@@ -42,6 +42,7 @@ font-weight:700;
 .hero{
 padding:80px 20px;
 text-align:center;
+background:linear-gradient(to bottom,#eef4ff,#f4f7ff);
 }
 
 .hero h2{
@@ -130,6 +131,7 @@ margin-bottom:18px;
 border:1px solid #ddd;
 border-radius:10px;
 font-size:16px;
+outline:none;
 }
 
 .form-box button{
@@ -198,7 +200,9 @@ font-size:42px;
 
 <section class="hero">
 <h2>Fast & Easy Loans</h2>
-<p>Get instant approval for Personal, Business, Home, Mortgage and Used Car Loans.</p>
+<p>
+Get instant approval for Personal, Business, Home, Mortgage and Used Car Loans.
+</p>
 </section>
 
 <section class="loan-section">
@@ -236,6 +240,7 @@ font-size:42px;
 </div>
 
 </div>
+
 </section>
 
 <section class="form-section">
@@ -246,17 +251,21 @@ font-size:42px;
 
 <form action="https://formsubmit.co/jayashreeailla95@gmail.com" method="POST">
 
+<input type="hidden" name="_captcha" value="false">
+
 <input type="text" name="name" placeholder="Full Name" required>
 
 <input type="tel" name="mobile" placeholder="Mobile Number" required>
 
 <select name="loan" required>
+
 <option value="">Select Loan Type</option>
 <option>Personal Loan</option>
 <option>Business Loan</option>
 <option>Home Loan</option>
 <option>Mortgage Loan</option>
 <option>Used Car Loan</option>
+
 </select>
 
 <input type="text" name="city" placeholder="City" required>
@@ -268,6 +277,7 @@ font-size:42px;
 </form>
 
 </div>
+
 </section>
 
 <a class="whatsapp" href="https://wa.me/919542359321" target="_blank">
