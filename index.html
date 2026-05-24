@@ -608,7 +608,7 @@ Check Eligibility
 <input type="text" name="name" placeholder="Enter Your Name" required>
 <input type="email" name="email" placeholder="Enter Email Address" required>
 <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
-<textarea rows="5" placeholder="Enter Loan Requirement"></textarea>
+<textarea name="loan" rows="5" placeholder="Enter Loan Requirement"></textarea>
 
 <button type="submit" class="submit-btn">
 
@@ -663,7 +663,7 @@ function checkEligibility(){
 
 let salary = document.getElementById("salary").value;
 
-if(salary >= 25000){
+if(salary >= 17000){
 
 document.getElementById("eligibilityResult").innerHTML =
 "✅ Eligible for Loan";
